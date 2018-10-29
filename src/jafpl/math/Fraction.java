@@ -4,6 +4,7 @@
 package jafpl.math;
 
 /**
+ * @author Mohammed Barmo
  * @author Erik Itter
  *
  */

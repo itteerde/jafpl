@@ -6,6 +6,11 @@ import java.security.NoSuchAlgorithmException;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * 
+ * @author Erik Itter
+ *
+ */
 class Problem000003Test {
 
 	@Test

@@ -1,5 +1,10 @@
 package jafpl.euler;
 
+/**
+ * 
+ * @author Mohammed Barmo
+ *
+ */
 public class Problem000003 {
 
 	public static void main(String[] args) {
@@ -8,7 +13,7 @@ public class Problem000003 {
 	}
 
 	public static String solve() {
-		return Integer.toString(6857);
+		return Integer.toString(42);
 	}
 
 }

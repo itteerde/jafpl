@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import jafpl.math.Fraction;
 
 /**
- * @author eriki
+ * @author Erik Itter
  *
  */
 class FractionTest {

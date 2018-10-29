@@ -2,6 +2,11 @@ package de.itter.math;
 
 import java.util.Vector;
 
+/**
+ * 
+ * @author Erik Itter
+ *
+ */
 public class SiebEratosthenes {
 
 	private Vector<Integer> primes = new Vector<Integer>();

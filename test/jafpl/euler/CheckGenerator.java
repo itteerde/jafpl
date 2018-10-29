@@ -3,6 +3,11 @@ package jafpl.euler;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+/**
+ * 
+ * @author Erik Itter
+ *
+ */
 public class CheckGenerator {
 
 	public static void main(String[] args) throws NoSuchAlgorithmException {
