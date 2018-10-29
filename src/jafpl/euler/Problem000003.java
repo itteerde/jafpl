@@ -2,7 +2,7 @@ package jafpl.euler;
 
 /**
  * 
- * @author Mohammed Barmo
+ * @author Mohammed Barmoo
  *
  */
 public class Problem000003 {
