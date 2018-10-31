@@ -70,4 +70,9 @@ public class Fraction implements Comparable<Fraction> {
 		return compareTo((Fraction) obj) == 0;
 	}
 
+	public Fraction simplify() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

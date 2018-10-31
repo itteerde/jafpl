@@ -1,5 +1,5 @@
 /**
- * 
+ * Crash course training for apprenticeship 
  */
 package jafpl;
 
@@ -27,6 +27,38 @@ class FractionTest {
 		Fraction b = new Fraction(5, 7);
 
 		assertEquals(new Fraction(29, 21), a.plus(b));
+	}
+
+	@Test
+	void testMinus() {
+		Fraction a = new Fraction(2, 3);
+		Fraction b = new Fraction(5, 7);
+
+		assertEquals(new Fraction(-1, 21), a.minus(b));
+	}
+
+	@Test
+	void testTimes() {
+		Fraction a = new Fraction(2, 3);
+		Fraction b = new Fraction(5, 7);
+
+		assertEquals(new Fraction(10, 21), a.times(b));
+	}
+
+	@Test
+	void divideBy() {
+
+		Fraction a = new Fraction(2, 3);
+		Fraction b = new Fraction(5, 7);
+
+		assertEquals(new Fraction(14, 15), a.divideBy(b));
+	}
+
+	@Test
+	void TestSimplify() {
+		Fraction a = new Fraction(30030, 1547);
+
+		assertEquals(new Fraction(330, 17), a.simplify());
 	}
 
 }
