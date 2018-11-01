@@ -11,7 +11,7 @@ public class Board {
 	@Override
 	public String toString() {
 		StringBuffer s = new StringBuffer();
-		for (int y = 8; y >= 0; y--) {
+		for (int y = 7; y >= 0; y--) {
 			for (int x = 0; x < 8; x++) {
 
 				s.append(position[y][x]);
