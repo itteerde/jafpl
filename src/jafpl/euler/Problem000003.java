@@ -8,7 +8,6 @@ package jafpl.euler;
  * Primfaktor der Zahl 600851475143?
  * 
  * 
- * @author Mohammed Barmoo
  * @see <a href=
  *      "https://projecteuler.net/problem=3">https://projecteuler.net/problem=3</a>
  *
