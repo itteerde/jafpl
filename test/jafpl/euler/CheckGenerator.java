@@ -12,7 +12,7 @@ public class CheckGenerator {
 
 	public static void main(String[] args) throws NoSuchAlgorithmException {
 
-		System.out.println(hexString("23514624000"));
+		System.out.println(hexString("871198282"));
 	}
 
 	public static String hexString(String s) throws NoSuchAlgorithmException {
