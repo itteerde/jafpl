@@ -7,7 +7,10 @@ package jafpl.euler;
  * Die Primfaktoren der Zahl 13195 sind 5, 7, 13 und 29. Was ist der größte
  * Primfaktor der Zahl 600851475143?
  * 
+ * 
  * @author Mohammed Barmoo
+ * @see <a href=
+ *      "https://projecteuler.net/problem=3">https://projecteuler.net/problem=3</a>
  *
  */
 public class Problem000003 {
