@@ -5,6 +5,9 @@ package jafpl;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.Collections;
+import java.util.Vector;
+
 import org.junit.jupiter.api.Test;
 
 import jafpl.math.Fraction;
@@ -87,6 +90,17 @@ class FractionTest {
 		assertEquals(0, a.compareTo(a));
 		assertEquals(0, a.compareTo(d));
 		assertEquals(1, c.compareTo(d));
+		
+		Vector<Fraction> v = new Vector<Fraction>();
+		v.add(a);
+		v.add(b);
+		v.add(c);
+		v.add(d);
+		Collections.sort(v);
+		assertEquals(a, v.get(0));
+		assertEquals(b, v.get(1));
+		assertEquals(d, v.get(2));
+		assertEquals(c, v.get(3));
 	}
 
 }
