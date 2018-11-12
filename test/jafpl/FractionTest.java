@@ -46,7 +46,7 @@ class FractionTest {
 	}
 
 	@Test
-	void divideBy() {
+	void testDivideBy() {
 
 		Fraction a = new Fraction(2, 3);
 		Fraction b = new Fraction(5, 7);
@@ -55,10 +55,25 @@ class FractionTest {
 	}
 
 	@Test
-	void TestSimplify() {
+	void testSimplify() {
 		Fraction a = new Fraction(30030, 1547);
 
 		assertEquals(new Fraction(330, 17), a.simplify());
+	}
+
+	@Test
+	void testEquals() {
+		Fraction a = new Fraction(1, 2);
+		Fraction b = new Fraction(2, 4);
+		Fraction c = new Fraction(1, 7);
+		Fraction d = new Fraction(1, 2);
+
+		assertEquals(true, a.equals(a));
+		assertEquals(false, a.equals(b));
+		assertEquals(false, b.equals(c));
+		assertEquals(true, a.equals(d));
+		assertEquals(true, d.equals(a));
+
 	}
 
 }

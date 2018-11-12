@@ -3,6 +3,8 @@
  */
 package jafpl.math;
 
+import de.itter.math.Algorithms;
+
 /**
  * @author Mohammed Barmo
  * @author Erik Itter
@@ -30,8 +32,9 @@ public class Fraction implements Comparable<Fraction> {
 		return denominator;
 	}
 
-	public Fraction plus(Fraction b) {
-		return null;
+	public Fraction plus(Fraction summand) {
+		return new Fraction(getNumerator() * summand.getDenominator() + summand.getNumerator() * getDenominator(),
+				getDenominator() * summand.getDenominator());
 	}
 
 	public Fraction minus(Fraction b) {
@@ -39,11 +42,11 @@ public class Fraction implements Comparable<Fraction> {
 	}
 
 	public Fraction times(Fraction factor) {
-		return null;
+		return new Fraction(getNumerator() * factor.getNumerator(), getDenominator() * factor.getDenominator());
 	}
 
 	public Fraction divideBy(Fraction divisor) {
-		return null;
+		return times(new Fraction(divisor.getDenominator(), divisor.getNumerator()));
 	}
 
 	@Override
@@ -57,22 +60,43 @@ public class Fraction implements Comparable<Fraction> {
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
 	@Override
-	public int compareTo(Fraction o) {
-		// TODO Auto-generated method stub
+	public int compareTo(Fraction b) {
+
+		long commonDenominator = Algorithms.lcm(getDenominator(), b.getDenominator());
+		long numeratorA = getNumerator() * (commonDenominator / getDenominator());
+		long numeratorB = b.getNumerator() * (commonDenominator / b.getDenominator());
+
+		if (numeratorA < numeratorB)
+			return -1;
+
+		if (numeratorA > numeratorB)
+			return 1;
+
 		return 0;
 	}
 
+	/**
+	 * Not mathematical equality! 2/4 does not equal 1/2 for this method. Use
+	 * <code>simplify</code> before checking for equality if you mean mathematical
+	 * equality.
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (!(obj instanceof Fraction)) {
 			return false;
 		}
-		return compareTo((Fraction) obj) == 0;
+
+		if (getNumerator() != ((Fraction) obj).getNumerator())
+			return false;
+		if (getDenominator() != ((Fraction) obj).getDenominator())
+			return false;
+
+		return true;
 	}
 
 	public Fraction simplify() {
-		// TODO Auto-generated method stub
-		return null;
+		long gcd = Algorithms.gcd(getNumerator(), getDenominator());
+		return new Fraction(getNumerator() / gcd, getDenominator() / gcd);
 	}
 
 }
