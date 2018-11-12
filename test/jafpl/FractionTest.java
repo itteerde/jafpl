@@ -75,5 +75,18 @@ class FractionTest {
 		assertEquals(true, d.equals(a));
 
 	}
+	
+	@Test
+	void testCompareTo() {
+		Fraction a = new Fraction(1, 2);
+		Fraction b = new Fraction(2, 4);
+		Fraction c = new Fraction(5, 7);
+		Fraction d = new Fraction(1, 2);
+		
+		assertEquals(-1, a.compareTo(c));
+		assertEquals(0, a.compareTo(a));
+		assertEquals(0, a.compareTo(d));
+		assertEquals(1, c.compareTo(d));
+	}
 
 }
