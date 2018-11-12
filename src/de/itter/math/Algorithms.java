@@ -1,6 +1,5 @@
 package de.itter.math;
 
-
 import java.math.BigInteger;
 import java.util.Collections;
 import java.util.Iterator;
@@ -59,9 +58,9 @@ public class Algorithms {
 			result = lcm(result, input[i]);
 		return result;
 	}
-	
-	public static BigInteger lcmBigInteger(BigInteger a, BigInteger b){
-		return a.multiply(b.divide(gcd(a,b)));
+
+	public static BigInteger lcmBigInteger(BigInteger a, BigInteger b) {
+		return a.multiply(b.divide(gcd(a, b)));
 	}
 
 	public static long[][] factorize(long n, long[] primes) {
@@ -195,5 +194,37 @@ public class Algorithms {
 
 	public static double root(double num, double root) {
 		return Math.pow(Math.E, Math.log(num) / root);
+	}
+
+	public static long fib(int n) {
+		long[] fibs = { 1, 1 };
+		if (n < 3) {
+			return 1;
+		}
+
+		for (int i = 3; i <= n; i++) {
+			long f = fibs[0] + fibs[1];
+			fibs[0] = fibs[1];
+			fibs[1] = f;
+		}
+
+		return fibs[1];
+
+	}
+
+	public static BigInteger fibBig(int n) {
+		BigInteger[] fibs = { BigInteger.ONE, BigInteger.ONE };
+		if (n < 3) {
+			return BigInteger.ONE;
+		}
+
+		for (int i = 3; i <= n; i++) {
+			BigInteger f = fibs[0].add(fibs[1]);
+			fibs[0] = fibs[1];
+			fibs[1] = f;
+		}
+
+		return fibs[1];
+
 	}
 }
