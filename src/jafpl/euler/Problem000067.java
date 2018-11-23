@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Problem000018 extends EulerProblem {
+public class Problem000067 extends EulerProblem {
 
 	public static void main(String[] args) {
 		int[][] numbers = readNumbers();
@@ -60,4 +60,5 @@ public class Problem000018 extends EulerProblem {
 
 		return numbers;
 	}
+
 }
