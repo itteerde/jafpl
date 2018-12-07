@@ -9,7 +9,10 @@ public class Palindrome {
 
 	public static void main(String[] args) {
 
-		System.out.println("\"" + PALINDROM_1 + "\" ist Palindrom?: " + isPalindrom(PALINDROM_1));
+		// System.out.println("\"" + PALINDROM_1 + "\" ist Palindrom?: " +
+		// isPalindrom(PALINDROM_1));
+		printASCIITable();
+
 	}
 
 	/**
@@ -24,16 +27,15 @@ public class Palindrome {
 		char[] test = { 69, 114, 105, 107 };
 		char[] chars = word.toCharArray();
 
-		printASCIITable();
-
 		return false;
 	}
 
 	private static void printASCIITable() {
 		for (int i = 0; i < 8; i++) {
 			for (int j = 0; j < 16; j++) {
-				System.out.println(" " + (char) (i * 16 + j) + " ");
+				System.out.print(" " + (char) (i * 16 + j) + " ");
 			}
+			System.out.println();
 		}
 	}
 
