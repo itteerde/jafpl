@@ -5,11 +5,17 @@ public class Palindrome {
 	private static String PALINDROM_1 = "neben";
 	private static String PALINDROM_2 = "Otto";
 	private static String PALINDROM_3 = "Reliefpfeiler";
+	private static String PALINDROM_2a = "otto";
+	private static String PALINDROM_3a = "reliefpfeiler";
 	private static String NOT_PALINDROM_1 = "ifjsdjfios";
 
 	public static void main(String[] args) {
 
 		System.out.println("\"" + PALINDROM_1 + "\" ist Palindrom?: " + isPalindrom(PALINDROM_1));
+		System.out.println("\"" + PALINDROM_3 + "\" ist Palindrom?: " + isPalindrom(PALINDROM_3));
+		System.out.println("\"" + PALINDROM_2 + "\" ist Palindrom?: " + isPalindrom(PALINDROM_2));
+		System.out.println("\"" + PALINDROM_3a + "\" ist Palindrom?: " + isPalindrom(PALINDROM_3a));
+		System.out.println("\"" + PALINDROM_2a + "\" ist Palindrom?: " + isPalindrom(PALINDROM_2a));
 
 	}
 
@@ -22,14 +28,15 @@ public class Palindrome {
 	 */
 	private static boolean isPalindrom(String word) {
 
-		char[] chars = word.toCharArray();
-		System.out.println(chars[0]);
-		System.out.println(chars[1]);
-		System.out.println(chars[2]);
-		System.out.println(chars[3]);
-		System.out.println(chars[4]);
+		char[] chars = word.toLowerCase().toCharArray();
 
-		return false;
+		for (int i = 0; i < chars.length / 2; i++) {
+			if (chars[i] != chars[chars.length - 1 - i]) {
+				return false;
+			}
+		}
+
+		return true;
 	}
 
 	private static void printASCIITable() {
