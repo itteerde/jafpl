@@ -16,6 +16,7 @@ public class Palindrome {
 		System.out.println("\"" + PALINDROM_2 + "\" ist Palindrom?: " + isPalindrom(PALINDROM_2));
 		System.out.println("\"" + PALINDROM_3a + "\" ist Palindrom?: " + isPalindrom(PALINDROM_3a));
 		System.out.println("\"" + PALINDROM_2a + "\" ist Palindrom?: " + isPalindrom(PALINDROM_2a));
+		System.out.println("\"" + NOT_PALINDROM_1 + "\" ist Palindrom?: " + isPalindrom(NOT_PALINDROM_1));
 
 	}
 
