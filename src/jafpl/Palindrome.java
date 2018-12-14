@@ -24,7 +24,7 @@ public class Palindrome {
 	 * Tests if a word provided is a palindrome.
 	 * 
 	 * @param word Word to be tested.
-	 * @return <code>true</code> if <code>word</code> is palindrom,
+	 * @return <code>true</code> if <code>word</code> is palindrom,jnhuhb
 	 *         <code>false</code> otherwise.
 	 */
 	private static boolean isPalindrom(String word) {
