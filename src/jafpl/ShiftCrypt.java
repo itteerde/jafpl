@@ -15,12 +15,20 @@ public class ShiftCrypt {
 			for (int i = 0; i < cipher.length; i++) {
 				cipher[i] = (char) (((cipher[i] + k - 'A') % 26) + 'A');
 			}
-			System.out.print(
-					"k=" + (Integer.toString(k).length() < 2 ? " " + Integer.toString(k) : Integer.toString(k)) + ": ");
-			System.out.println(cipher);
 
+			report(k, cipher);
 		}
 
+	}
+
+	/**
+	 * @param k
+	 * @param cipher
+	 */
+	private static void report(int k, char[] cipher) {
+		System.out.print(
+				"k=" + (Integer.toString(k).length() < 2 ? " " + Integer.toString(k) : Integer.toString(k)) + ": ");
+		System.out.println(cipher);
 	}
 
 }
