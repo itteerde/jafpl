@@ -6,15 +6,21 @@ public class ShiftCrypt {
 
 		// String message =
 
-		String message = "GDVLVWNHLQVLFKHUHUNRGHGHUZLUGMXOLXVFDHVDUCXJHVFKULHEHQXQGGHQNDQQMHGHUEUHFKHQGHUGLHVSUDFKHNHQQWLQGHUGLHQDFKULFKWYHUVFKOXHVVHOWZRUGHQLVWPDQEUDXFKWQRFKHLQHJHZLVVHODHQJHGHVNODUWHAWHVDEHUGDQQLVWHVHLQNLQGHUVSLHO";
-		int shift = 0;
+		String message = "UVIERVTYJKVJTYIZKKZJKUVIRCCXVDVZEVQVZTYVEJLSJKZKLKZFEJRCXFIZKYDLJ";
+		int k = 0;
 
-		char[] cipher = message.toCharArray();
-		for (int i = 0; i < cipher.length; i++) {
-			cipher[i] = (char) (((cipher[i] + shift - 'A') % 26) + 'A');
+		for (k = 0; k < 26; k++) {
+			char[] cipher = message.toCharArray();
+
+			for (int i = 0; i < cipher.length; i++) {
+				cipher[i] = (char) (((cipher[i] + k - 'A') % 26) + 'A');
+			}
+			System.out.print(
+					"k=" + (Integer.toString(k).length() < 2 ? " " + Integer.toString(k) : Integer.toString(k)) + ": ");
+			System.out.println(cipher);
+
 		}
 
-		System.out.println(cipher);
 	}
 
 }
